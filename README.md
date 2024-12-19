@@ -1,6 +1,5 @@
-[![Build Status](https://ci.loohpjames.com/job/ImageFrame/badge/icon)](https://ci.loohpjames.com/job/ImageFrame/)
 # ImageFrame (Modified)
-I modified the plugin to make my server able to refresh the image automatically with NPC loading it.
+I modified the plugin to make my server able to refresh the image automatically (without map owner in server) with NPC loading it. This made my server's AD wall can load dynamically.
 ## usage:
 1. install citizens plugin
 2. create map with `/imageframe create mapName ....`
@@ -8,7 +7,9 @@ I modified the plugin to make my server able to refresh the image automatically 
 4. assign the map to the NPC `/imagemap npc <ID> mapName`
 
 Done! now you can refresh the map with `/imagemap npc refresh <ID> <URL>`  
-This made my server's AD wall can load dynamically.
+
+## Notes
+My server version is 1.20.1 so I deleted other versions, to make it quicker to compile.
 
 # Original Readme:
 https://www.spigotmc.org/resources/106031/
