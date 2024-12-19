@@ -1,6 +1,14 @@
 [![Build Status](https://ci.loohpjames.com/job/ImageFrame/badge/icon)](https://ci.loohpjames.com/job/ImageFrame/)
-# ImageFrame
+# ImageFrame (Modified)
+I modified the plugin to make my server able to refresh the image automatically with NPC loading it.
+## usage:
+1. install citizens plugin
+2. create map with `/imageframe create mapName ....`
+3. create a NPC `/npc create ...` and get the ID
+4. assign the map to the NPC `/imagemap npc <ID> mapName`
+Done! now you can refresh the map with `/imagemap npc refresh <ID> <URL>`
 
+# Original Readme:
 https://www.spigotmc.org/resources/106031/
 
 Put images on maps and walls!
