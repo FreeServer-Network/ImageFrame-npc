@@ -5,6 +5,7 @@ api-version: 1.13
 prefix: ImageFrame
 authors: [LOOHP]
 description: Put images on maps and walls!
+depend: [Citizens]
 folia-supported: true
 softdepend: [ViaVersion]
 
@@ -12,8 +13,14 @@ commands:
   imageframe:
     aliases: [iframe, if, frame]
     description: Plugin main command
+  imagemap:
+    description: Main ImageFrame command
+    usage: /<command>
 
 permissions:
+  imageframe.npc:
+    description: Allows assigning image maps to NPCs
+    default: op
   imageframe.create:
     default: true
     description: Allow players to create new image maps

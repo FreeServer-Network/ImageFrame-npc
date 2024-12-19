@@ -20,8 +20,10 @@
 
 package com.loohp.imageframe;
 
+import com.loohp.imageframe.commands.NPCCommand;
 import com.loohp.imageframe.config.Config;
 import com.loohp.imageframe.debug.Debug;
+import com.loohp.imageframe.integration.CitizensIntegration;
 import com.loohp.imageframe.listeners.Events;
 import com.loohp.imageframe.metrics.Charts;
 import com.loohp.imageframe.metrics.Metrics;
@@ -283,6 +285,14 @@ public class ImageFrame extends JavaPlugin {
         reloadConfig();
 
         getCommand("imageframe").setExecutor(new Commands());
+        // Inside onEnable() method, after all other initializations
+        if (isPluginEnabled("Citizens")) {
+            getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "[ImageFrame] ImageFrame has hooked into Citizens!");
+            CitizensIntegration.initialize();
+        }
+
+        // Add the command executor
+        getCommand("imagemap").setExecutor(new NPCCommand());
 
         if (isPluginEnabled("ViaVersion")) {
             getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "[ImageFrame] ImageFrame has hooked into ViaVersion!");
