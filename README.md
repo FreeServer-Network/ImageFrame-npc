@@ -6,7 +6,9 @@ I modified the plugin to make my server able to refresh the image automatically 
 2. create map with `/imageframe create mapName ....`
 3. create a NPC `/npc create ...` and get the ID
 4. assign the map to the NPC `/imagemap npc <ID> mapName`
-Done! now you can refresh the map with `/imagemap npc refresh <ID> <URL>`
+
+Done! now you can refresh the map with `/imagemap npc refresh <ID> <URL>`  
+This made my server's AD wall can load dynamically.
 
 # Original Readme:
 https://www.spigotmc.org/resources/106031/
